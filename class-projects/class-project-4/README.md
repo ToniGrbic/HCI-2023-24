@@ -2,7 +2,7 @@
 
 ### Final result - landing page of interior design app
 
-![](images/landing_page_interior_design.PNG)
+![](images/landing_page_interior_design.png)
 
 ### ChatGPT prompts - continued chat from user personas and IA (class-project-2)
 
