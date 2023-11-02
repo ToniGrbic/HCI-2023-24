@@ -32,7 +32,7 @@ export default function RootLayout({
           <ul className="flex justify-center gap-10 text-lg">
             {Object.entries(pages).map(([name, path]) => {
               return (
-                <li>
+                <li key={name}>
                   <Link href={path}>{name}</Link>
                 </li>
               );
