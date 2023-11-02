@@ -15,7 +15,7 @@ const pages = {
   designs: "/designs",
   portfolio: "/portfolio",
   tools: "/tools",
-  blogs: "/blogs",
+  blogs: "/blogs?_limit=10&_page=1",
   contact: "/contact",
 };
 export default function RootLayout({
