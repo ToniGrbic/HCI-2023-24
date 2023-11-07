@@ -1,0 +1,270 @@
+@font-face {
+  font-family: handScript;
+  src: url("../assets/hand_script.woff2");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  color: white;
+  background: rgb(31, 31, 31);
+  background-image: url("../assets/app_background_1280x720.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+  --secondary-color: #313bac;
+  --black-color: #030303;
+  --gray-color: rgb(194, 194, 194);
+  --blue-color: #2a323b;
+  --red-color: #db444e;
+  --dark-red-color: #d72834;
+  --purple-color: rgb(138, 48, 135);
+  --dark-purple-color: rgb(97, 32, 95);
+  --gray-navbar-color-menu: rgba(83, 83, 83, 0.9);
+  --gray-navbar-color-transparent: rgba(83, 83, 83, 0.8);
+  --dark-color: rgb(53, 53, 53);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  padding-top: 50px;
+  h1 span {
+    font-size: 3.5rem;
+  }
+  h1.projects-skills {
+    font-family: handScript;
+    font-size: 3.5rem;
+  }
+}
+
+.descriptionDiv {
+  width: 90%;
+}
+
+.about {
+  width: 80%;
+  margin-bottom: 9rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  text-align: left;
+}
+.fade {
+  opacity: 0;
+}
+.aboutBtn {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  transition: 300ms;
+  color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__bold-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: black;
+  text-align: left;
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+}
+
+.app__p-text {
+  font-size: 0.8rem;
+  text-align: left;
+  color: black;
+  line-height: 1.5;
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+
+.openModalBtn {
+  height: 40px;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 2px solid var(--red-color);
+  background-color: var(--red-color);
+  font-size: 1rem;
+  transition: 500ms;
+  color: white;
+  &:hover {
+    background-color: var(--dark-red-color);
+    border-color: var(--dark-red-color);
+    cursor: pointer;
+  }
+}
+
+.app__modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.app__modalContent {
+  background-color: var(--gray-color);
+  margin: 15% auto;
+  padding: 20px;
+  border: 3px solid var(--red-color);
+  border-radius: 10px;
+  width: 50%;
+  color: black;
+  padding: 30px;
+  text-align: left;
+  font-size: 1.1rem;
+  p {
+    margin: 7px 0px 7px 10px;
+  }
+  li {
+    margin: 7px 0px 7px 30px;
+  }
+}
+.app__modalLinks {
+  a {
+    color: blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.app__close {
+  position: relative;
+  color: var(--red-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    h1 {
+      span {
+        font-size: 2.5rem;
+      }
+    }
+    font-size: 0.8rem;
+  }
+  .about {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .container {
+    h1 {
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .about {
+    width: 50%;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 714px) {
+  .app__modalContent {
+    width: 80%;
+    margin: 30% auto;
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    trasform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader div {
+  position: absolute;
+  animation: loader-spin 1s linear infinite;
+  width: 50px;
+  height: 50px;
+  top: 100px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  box-shadow: 0 4px 0 0 var(--red-color);
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  backface-visibility: hidden;
+}
