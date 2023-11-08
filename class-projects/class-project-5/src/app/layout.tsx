@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export type Pages = Record<string, `/${string}`>;
-const defaultQuery = { _limit: 10, _page: 1 };
+const defaultQueryString = "_limit=10&_page=1";
 
 const pages: Pages = {
   home: "/",
@@ -20,7 +19,7 @@ const pages: Pages = {
   designs: "/designs",
   portfolio: "/portfolio",
   tools: "/tools",
-  blogs: `/blogs?${defaultQuery}`,
+  blogs: `/blogs?${defaultQueryString}`,
   contact: "/contact",
 };
 
