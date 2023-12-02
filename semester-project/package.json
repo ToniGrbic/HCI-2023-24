@@ -9,10 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/client": "^3.4.1",
+    "@sanity/image-url": "^1.0.1",
     "next": "14.0.1",
+    "next-sanity-image": "^6.1.0",
     "node": "^18.14.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icons": "^4.4.0",
+    "sass": "^1.54.4",
+    "styled-components": "^5.3.5",
+    "styled-normalize": "^8.0.7",
+    "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -20,6 +28,13 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
-    "typescript": "^5"
+    "prettier": "^3.0.3",
+    "typescript": "^5",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
+    "jsdom": "^22.1.0",
+    "sanity-codegen": "^0.9.8"
   }
 }
