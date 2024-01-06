@@ -6,6 +6,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import { client } from "../../lib/client";
 import { NextSanityImage } from "../skills/skills";
 import { Works } from "../../types/schema-types";
+import Filter from "../../components/Filter";
 
 export type ModalObject = {
   description: string;
@@ -15,7 +16,19 @@ export type ModalObject = {
   projectLink?: string;
 };
 
+export const filterOptions = {
+  All: "All",
+  React: "React",
+  NextJS: "NextJS",
+  JavaScript: "JavaScript",
+  TypeScript: "TypeScript",
+};
+
 const Projects = ({ projects }: { projects: Works[] }) => {
+  const nextSanityImage = useNextSanityImage;
+  const filters = Object.entries(filterOptions);
+
+  const [filter, setFilter] = useState<string>("All");
   const [showProjectModal, setShowProjectModal] = useState<boolean>(false);
   const [modalProject, setModalProject] = useState<ModalObject>({
     description: "",
@@ -24,7 +37,6 @@ const Projects = ({ projects }: { projects: Works[] }) => {
     codeLink: "",
     projectLink: "",
   });
-  const nextSanityImage = useNextSanityImage;
 
   const handleShowModal = (projectId: string) => {
     const currentProject = projects.find(
@@ -47,22 +59,24 @@ const Projects = ({ projects }: { projects: Works[] }) => {
       {showProjectModal && (
         <Modal {...modalProject} setShowModal={setShowProjectModal} />
       )}
+      <Filter filters={filters} setFilter={setFilter} />
+      <div className={styles.app__projects}>
+        {projects?.map((project) => {
+          const imageProps: NextSanityImage = nextSanityImage(
+            client,
+            project.imgUrl
+          );
 
-      {projects?.map((project) => {
-        const imageProps: NextSanityImage = nextSanityImage(
-          client,
-          project.imgUrl
-        );
-
-        return (
-          <Project
-            key={project._id}
-            imageProps={imageProps}
-            project={project}
-            handleShowModal={handleShowModal}
-          />
-        );
-      })}
+          return (
+            <Project
+              key={project._id}
+              imageProps={imageProps}
+              project={project}
+              handleShowModal={handleShowModal}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
