@@ -19,16 +19,15 @@ const getAge = (): number => {
 const myFont = localFont({ src: "../assets/hand_script.woff2" });
 
 function Home({ about }: { about: About }) {
-  const [age, setAge] = useState<number>(0);
+  const [age, setAge] = useState<number>(getAge());
   const [showAbout, setShowAbout] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    setAge(getAge());
-
     const intervalId = setInterval(() => {
       setAge((age) => age + YEARS_IN_100_MILISEC);
     }, 100);
+
     setIsLoading(false);
 
     return () => {
@@ -36,9 +35,7 @@ function Home({ about }: { about: About }) {
     };
   }, []);
 
-  if (isLoading) {
-    return <Loading />;
-  }
+  if (isLoading) return <Loading />;
 
   return (
     <>
