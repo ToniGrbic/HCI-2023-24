@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/Projects.module.scss";
+import styles from "@/styles/Projects.module.scss";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { NextSanityImage } from "../app/skills/skills";
-import { Works } from "../types/schema-types";
+import { Works } from "@/types/schema-types";
 
 type ProjectProps = {
   project: Works;

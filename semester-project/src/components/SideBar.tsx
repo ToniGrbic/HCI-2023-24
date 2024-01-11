@@ -1,9 +1,9 @@
 "use client";
 import React, { Dispatch, SetStateAction, useRef, useState } from "react";
-import useClickOutside from "../hooks/custom/useClickOutside";
+import useClickOutside from "@/hooks/custom/useClickOutside";
 import { HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
-import styles from "../styles/Navbar.module.scss";
+import styles from "@/styles/Navbar.module.scss";
 
 type SidebarProps = {
   links: [string, string][];

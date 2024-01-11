@@ -1,6 +1,6 @@
-import { client } from "../../lib/client";
+import { client } from "@/lib/client";
 import Projects from "./projects";
-import { Works } from "../../types/schema-types";
+import { Works } from "@/types/schema-types";
 
 const getProjects = async (): Promise<Works[]> => {
   const query = '*[_type == "works"]';

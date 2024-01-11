@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import styles from "../../styles/Projects.module.scss";
-import { Modal, Project } from "../../components";
+import styles from "@/styles/Projects.module.scss";
+import { Modal, Project } from "@/components";
 import { useNextSanityImage } from "next-sanity-image";
-import { client } from "../../lib/client";
+import { client } from "@/lib/client";
 import { NextSanityImage } from "../skills/skills";
-import { Works } from "../../types/schema-types";
-import Filter from "../../components/Filter";
+import { Works } from "@/types/schema-types";
+import Filter from "@/components/Filter";
 
 export type ModalObject = {
   description: string;

@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import styles from "../../styles/Skills.module.scss";
-import { client } from "../../lib/client";
-import { Modal } from "../../components";
+import styles from "@/styles/Skills.module.scss";
+import { client } from "@/lib/client";
+import { Modal } from "@/components";
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
-import { Skills } from "../../types/schema-types";
+import { Skills } from "@/types/schema-types";
 
 export type NextSanityImage = ReturnType<typeof useNextSanityImage>;
 

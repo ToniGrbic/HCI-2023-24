@@ -1,6 +1,6 @@
 import Home from "./home";
-import { client } from "../lib/client";
-import { About } from "../types/schema-types";
+import { client } from "@/lib/client";
+import { About } from "@/types/schema-types";
 import React from "react";
 
 async function getProfile(): Promise<About[]> {

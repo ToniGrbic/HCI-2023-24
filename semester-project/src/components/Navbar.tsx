@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import styles from "../styles/Navbar.module.scss";
+import styles from "@/styles/Navbar.module.scss";
 import { SocialLinks, SideBar } from ".";
 import Image from "next/image";
-import icon from "../assets/favicon-2.png";
+import icon from "@/assets/favicon-2.png";
 
 const Navbar = () => {
   const links = {
@@ -42,9 +42,8 @@ const Navbar = () => {
                     }`}
                 >
                   {name}
-                  <div
-                    className={
-                      currentLink === path
+                  <div className={
+                       currentLink === path
                         ? `${styles.app__navbar_link_underline}`
                         : ""
                     }
