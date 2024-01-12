@@ -143,6 +143,11 @@
   }
 }
 
+.app__filter_btn_active {
+  background-color: rgba(199, 199, 199, 0.816);
+  //color: var(--red-color);
+}
+
 .app__filter_parent {
   display: flex;
   flex-direction: row;

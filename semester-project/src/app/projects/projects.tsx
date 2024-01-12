@@ -1,10 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "@/styles/Projects.module.scss";
 import { Modal, Project } from "@/components";
 import { useNextSanityImage } from "next-sanity-image";
-import { client } from "@/lib/client";
-import { NextSanityImage } from "../skills/skills";
 import { Works } from "@/types/schema-types";
 import Filter from "@/components/Filter";
 
@@ -18,18 +16,17 @@ export type ModalObject = {
 
 export const filterOptions = {
   All: "All",
-  React: "React",
+  React: "ReactJS",
   NextJS: "NextJS",
   JavaScript: "JavaScript",
   TypeScript: "TypeScript",
 };
 
 const Projects = ({ projects }: { projects: Works[] }) => {
-  const nextSanityImage = useNextSanityImage;
   const filters = Object.entries(filterOptions);
-
-  const [filter, setFilter] = useState<string>("All");
+  const [activeFilter, setActiveFilter] = useState<string>("All");
   const [showProjectModal, setShowProjectModal] = useState<boolean>(false);
+  const [filteredProjects, setFilteredProjects] = useState<Works[]>(projects);
   const [modalProject, setModalProject] = useState<ModalObject>({
     description: "",
     title: "",
@@ -38,19 +35,20 @@ const Projects = ({ projects }: { projects: Works[] }) => {
     projectLink: "",
   });
 
+  useEffect(() => {
+    const filtered = projects.filter(
+      (project) => project.tags.includes(activeFilter) || activeFilter === "All"
+    );
+    setFilteredProjects(filtered);
+  }, [activeFilter]);
+
   const handleShowModal = (projectId: string) => {
     const currentProject = projects.find(
       (project) => project._id === projectId
     ) as Works;
     const { title, description, projectLink, codeLink, tags } = currentProject;
 
-    setModalProject({
-      title,
-      description,
-      projectLink,
-      codeLink,
-      tags,
-    });
+    setModalProject({ title, description, projectLink, codeLink, tags });
     setShowProjectModal(true);
   };
 
@@ -59,18 +57,16 @@ const Projects = ({ projects }: { projects: Works[] }) => {
       {showProjectModal && (
         <Modal {...modalProject} setShowModal={setShowProjectModal} />
       )}
-      <Filter filters={filters} setFilter={setFilter} />
+      <Filter
+        filters={filters}
+        setFilter={setActiveFilter}
+        activeFilter={activeFilter}
+      />
       <div className={styles.app__projects}>
-        {projects?.map((project) => {
-          const imageProps: NextSanityImage = nextSanityImage(
-            client,
-            project.imgUrl
-          );
-
+        {filteredProjects.map((project) => {
           return (
             <Project
               key={project._id}
-              imageProps={imageProps}
               project={project}
               handleShowModal={handleShowModal}
             />

@@ -4,14 +4,20 @@ import styles from "@/styles/Projects.module.scss";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { NextSanityImage } from "../app/skills/skills";
 import { Works } from "@/types/schema-types";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/lib/client";
 
 type ProjectProps = {
   project: Works;
   handleShowModal: (projectId: string) => void;
-  imageProps: NextSanityImage;
 };
 
-const Project = ({ project, handleShowModal, imageProps }: ProjectProps) => {
+const Project = ({ project, handleShowModal }: ProjectProps) => {
+  const imageProps: NextSanityImage = useNextSanityImage(
+    client,
+    project.imgUrl
+  );
+
   return (
     <div className={styles.app__project_item}>
       <div className={`${styles.app__project_img} app__flex`} key={project._id}>
