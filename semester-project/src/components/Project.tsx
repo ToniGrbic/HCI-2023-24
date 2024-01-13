@@ -39,7 +39,7 @@ const Project = ({ project, handleShowModal }: ProjectProps) => {
         <h4 className="app__bold-text">{project.title}</h4>
         <p className="app__p-text" style={{ marginTop: 10 }}>
           <button
-            className="openModalBtn"
+            className="app__modal-btn"
             onClick={() => handleShowModal(project._id)}
           >
             Description

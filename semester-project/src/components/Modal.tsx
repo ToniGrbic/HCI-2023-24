@@ -20,7 +20,7 @@ const Modal = (props: ModalProps) => {
 
   return (
     <div className="app__modal">
-      <div className="app__modalContent" ref={wrapperRef}>
+      <div className="app__modal-content" ref={wrapperRef}>
         <span className="app__close" onClick={() => setShowModal(false)}>
           &times;
         </span>
@@ -36,7 +36,7 @@ const Modal = (props: ModalProps) => {
               })}
             </ul>
             {codeLink && (
-              <div className="app__modalLinks">
+              <div className="app__modal-links">
                 <h3>Links:</h3>
                 {projectLink && (
                   <p>

@@ -85,14 +85,14 @@ a {
   }
 }
 
-.descriptionDiv {
+.description-div {
   width: 90%;
 }
 
 .about {
   width: 80%;
   margin-bottom: 9rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
   padding: 2rem;
   background: rgba(0, 0, 0, 0.55);
   border-radius: 10px;
@@ -104,11 +104,11 @@ a {
 .fade {
   opacity: 0;
 }
-.aboutBtn {
+.about-btn {
   margin-top: 2rem;
-  padding: 0.7rem;
+  padding: 1rem;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.35);
   font-size: 1rem;
   transition: 300ms;
   color: white;
@@ -117,6 +117,7 @@ a {
     background-color: rgba(0, 0, 0, 0.6);
   }
 }
+
 .app__flex {
   display: flex;
   justify-content: center;
@@ -142,7 +143,7 @@ a {
   }
 }
 
-.openModalBtn {
+.app__modal-btn {
   height: 40px;
   padding: 0.6rem;
   border-radius: 5px;
@@ -168,7 +169,7 @@ a {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.app__modalContent {
+.app__modal-content {
   background-color: var(--gray-color);
   margin: 15% auto;
   padding: 20px;
@@ -186,7 +187,7 @@ a {
     margin: 7px 0px 7px 30px;
   }
 }
-.app__modalLinks {
+.app__modal-links {
   a {
     color: blue;
     &:hover {
@@ -241,7 +242,7 @@ a {
 }
 
 @media screen and (max-width: 714px) {
-  .app__modalContent {
+  .app__modal-content {
     width: 80%;
     margin: 30% auto;
     font-size: 0.95rem;

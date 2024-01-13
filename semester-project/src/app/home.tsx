@@ -39,7 +39,7 @@ function Home({ about }: { about: About }) {
 
   return (
     <>
-      <div className="descriptionDiv">
+      <div className="description-div">
         <h1>
           Hello my name is
           <span className={myFont.className}>{about.name}</span>
@@ -49,7 +49,7 @@ function Home({ about }: { about: About }) {
       </div>
       <button
         onClick={() => setShowAbout((prev) => !prev)}
-        className="aboutBtn"
+        className="about-btn"
       >
         Learn more
       </button>
