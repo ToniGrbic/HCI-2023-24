@@ -7,13 +7,14 @@ import { SocialLinks, SideBar } from ".";
 import Image from "next/image";
 import icon from "@/assets/favicon-2.png";
 
+const links = {
+  Home: "/",
+  Projects: "/projects",
+  Skills: "/skills",
+  Experiences: "/experiences",
+};
+
 const Navbar = () => {
-  const links = {
-    home: "/",
-    projects: "/projects",
-    skills: "/skills",
-    experiences: "/experiences",
-  };
   const linksArr: [string, string][] = Object.entries(links);
   const [currentLink, setCurrentLink] = useState<string>("");
   const pathname: string = usePathname();
@@ -42,8 +43,9 @@ const Navbar = () => {
                     }`}
                 >
                   {name}
-                  <div className={
-                       currentLink === path
+                  <div
+                    className={
+                      currentLink === path
                         ? `${styles.app__navbar_link_underline}`
                         : ""
                     }
