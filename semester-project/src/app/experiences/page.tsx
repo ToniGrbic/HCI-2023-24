@@ -19,7 +19,7 @@ const Page = async () => {
             className={`${index % 2 == 0 ? styles.left : styles.right}
                ${styles.container} `}
           >
-            <div className={`${styles.content} app__modalLinks`}>
+            <div className={`${styles.content} app__modal-links`}>
               <h2>{experience.timePeriod}</h2>
               <p>
                 {experience.title} at {experience.department}
