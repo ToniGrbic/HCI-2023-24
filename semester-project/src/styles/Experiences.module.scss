@@ -1,5 +1,14 @@
 /* Set a background color */
 
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 1rem;
+}
+.year {
+  text-align: center;
+  margin-left: 0rem;
+}
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
@@ -7,7 +16,8 @@
   margin: 0 auto;
   width: 100%;
   color: black;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -102,6 +112,10 @@
     left: 31px;
   }
 
+  .year {
+    text-align: left;
+    margin-left: 0.8rem;
+  }
   /* Full-width containers */
   .container {
     width: 100%;
