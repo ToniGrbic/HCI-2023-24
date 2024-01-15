@@ -50,6 +50,7 @@ const SkillSection = ({ skills }: { skills: Skills[] }) => {
                     width={50}
                     height={50}
                     alt={skill.name}
+                    priority
                   />
                   <p>{skill.name}</p>
                 </div>

@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className={styles.app__navbar}>
       <div className={styles.app__icon_div} aria-hidden="true">
-        <Image src={icon} alt="icon" width={32} height={32} />
+        <Image src={icon} alt="icon" width={32} height={32} priority />
         <h3>portfolio</h3>
       </div>
       <div>
