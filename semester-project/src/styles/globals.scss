@@ -90,6 +90,18 @@ a {
   width: 90%;
 }
 
+.social-link-container {
+  display: flex;
+  align-items: center;
+}
+
+.social-link-text {
+  margin-left: 6px;
+  &:hover {
+    color: var(--red-color);
+  }
+}
+
 .about {
   width: 80%;
   margin-bottom: 9rem;

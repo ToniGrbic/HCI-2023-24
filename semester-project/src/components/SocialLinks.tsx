@@ -5,7 +5,7 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 
-const SocialLinks = () => {
+const SocialLinks = ({ showIconText = false }: { showIconText?: boolean }) => {
   return (
     <>
       <div>
@@ -15,7 +15,11 @@ const SocialLinks = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <AiFillGithub size={30} />
+          <div className="social-link-container">
+            <AiFillGithub size={30} />
+
+            {showIconText ? <p className="social-link-text">Github</p> : ""}
+          </div>
         </a>
       </div>
       <div>
@@ -25,7 +29,10 @@ const SocialLinks = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <AiFillLinkedin size={30} />
+          <div className="social-link-container">
+            <AiFillLinkedin size={30} />
+            {showIconText ? <p className="social-link-text">Linkden</p> : ""}
+          </div>
         </a>
       </div>
       <div>
@@ -35,7 +42,10 @@ const SocialLinks = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <AiOutlineInstagram size={30} />
+          <div className="social-link-container">
+            <AiOutlineInstagram size={30} />
+            {showIconText ? <p className="social-link-text">Instagram</p> : ""}
+          </div>
         </a>
       </div>
     </>

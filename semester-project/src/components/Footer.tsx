@@ -8,12 +8,16 @@ const Footer = () => {
 
   return (
     <div className={styles.app__footer}>
-      <p>My socials:</p>
-      <div className={styles.app__footer_icons}>
-        <SocialLinks />
+      <div className={styles.app__footer_social}>
+        <p>My socials:</p>
+        <div className={styles.app__footer_icons}>
+          <SocialLinks showIconText />
+        </div>
       </div>
-      <p>Gmail: tonigrbic.5@gmail.com</p>
-      <p>{year} Created by Toni Grbić, all rights reserved</p>
+      <div className={styles.app__footer_text}>
+        <p>Gmail: tonigrbic.5@gmail.com</p>
+        <p>{year} Created by Toni Grbić, all rights reserved</p>
+      </div>
     </div>
   );
 };
