@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import styles from "@/styles/Projects.module.scss";
-import { NextSanityImage } from "@/types/return-types";
-import { useNextSanityImage } from "next-sanity-image";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { useNextSanityImage } from "next-sanity-image";
+import { NextSanityImage } from "@/types/return-types";
 import { Works } from "@/types/schema-types";
 import { client } from "@/lib/client";
 

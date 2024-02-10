@@ -1,9 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
-import React from "react";
-import Loading from "./loading";
+import React, { useState, useEffect } from "react";
 import localFont from "next/font/local";
-import { About } from "@/types/schema-types";
+import Loading from "./loading";
+import type { About } from "@/types/schema-types";
 import {
   MILISEC_IN_YEAR,
   YEARS_IN_100_MILISEC,

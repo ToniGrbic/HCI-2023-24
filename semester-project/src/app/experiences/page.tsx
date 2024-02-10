@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/styles/Experiences.module.scss";
 import { client } from "@/lib/client";
 import { Experiences } from "@/types/schema-types";

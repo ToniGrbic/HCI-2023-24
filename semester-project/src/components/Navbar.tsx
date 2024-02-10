@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 import styles from "@/styles/Navbar.module.scss";
-import { SocialLinks, SideBar } from ".";
-import Image from "next/image";
 import icon from "@/assets/favicon-2.png";
+import { usePathname } from "next/navigation";
+import { SocialLinks, SideBar } from ".";
+import Link from "next/link";
+import Image from "next/image";
 
 const links = {
   Home: "/",

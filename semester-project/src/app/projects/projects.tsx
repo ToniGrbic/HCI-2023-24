@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/Projects.module.scss";
 import { Modal, Project } from "@/components";
-import { useNextSanityImage } from "next-sanity-image";
 import { Works } from "@/types/schema-types";
 import Filter from "@/components/Filter";
 

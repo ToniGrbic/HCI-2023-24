@@ -1,7 +1,7 @@
+import React from "react";
 import Home from "./home";
 import { client } from "@/lib/client";
 import { About } from "@/types/schema-types";
-import React from "react";
 
 async function getProfile(): Promise<About[]> {
   const query = '*[_type == "about"]';

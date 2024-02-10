@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Navbar, Footer } from ".";
 
-const Layout = ({ children }: {children: ReactNode}) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="wrapper">
       <div>
