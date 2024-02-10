@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className={styles.app__footer}>
       <p>My socials:</p>
-      <div>
+      <div className={styles.app__footer_icons}>
         <SocialLinks />
       </div>
       <p>Gmail: tonigrbic.5@gmail.com</p>

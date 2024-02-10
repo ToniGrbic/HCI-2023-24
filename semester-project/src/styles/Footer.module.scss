@@ -11,3 +11,9 @@
   background-color: var(--dark-color);
   padding: 1rem;
 }
+
+.app__footer_icons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
