@@ -11,7 +11,7 @@ export default async function Page() {
   const projects = await getProjects();
   return (
     <>
-      <h1 className="projects-skills">My Projects</h1>
+      <h1 className="hand-script-headline">My Projects</h1>
       <h4 style={{ marginTop: "20px" }}>Select filter option:</h4>
       <Projects projects={projects} />
     </>

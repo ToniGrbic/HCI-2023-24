@@ -15,8 +15,6 @@ const getAge = (): number => {
   return (currentTime - birthTime) / MILISEC_IN_YEAR;
 };
 
-const myFont = localFont({ src: "../assets/hand_script.woff2" });
-
 function Home({ about }: { about: About }) {
   const [age, setAge] = useState<number>(getAge());
   const [showAbout, setShowAbout] = useState<boolean>(false);
@@ -41,7 +39,7 @@ function Home({ about }: { about: About }) {
       <div className="description-div">
         <h1>
           Hello my name is
-          <span className={myFont.className}>{about.name}</span>
+          <span className="hand-script-headline">{about.name}</span>
         </h1>
         <h2>{about.description}</h2>
         <h2>{age.toFixed(8)} years old</h2>
