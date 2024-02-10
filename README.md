@@ -1,5 +1,5 @@
 ﻿# Semester Project Template <!-- omit in toc -->
-## Deployed project link: https://tgrbic-semester-project.vercel.app/
+## Deployed project link: https://tgrbic-portfolio.vercel.app/
 - [Project Structure](#project-structure)
   - [Example repo](#example-repo)
 - [Getting Started](#getting-started)
