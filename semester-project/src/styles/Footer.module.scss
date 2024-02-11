@@ -28,3 +28,11 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+@media screen and (max-width: 567px) {
+  .app__footer {
+    gap: 3rem;
+    align-items: space-between;
+    font-size: 0.8rem;
+  }
+}
