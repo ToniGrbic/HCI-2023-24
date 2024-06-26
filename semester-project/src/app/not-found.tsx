@@ -2,7 +2,7 @@
 import styles from "@/styles/NotFound.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import notFoundImage from "../assets/404-image.png.png";
+import notFoundImage from "@/assets/404-image.png";
 
 const NotFound = () => {
   const router = useRouter();
