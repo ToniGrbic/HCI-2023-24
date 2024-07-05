@@ -1,9 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/Projects.module.scss";
-import { Modal, Project } from "@/components";
+import { Modal, Project, SearchBar, Filter } from "@/components";
 import { Works } from "@/types/schema-types";
-import Filter from "@/components/Filter";
 
 export type ModalObject = {
   description: string;
@@ -24,8 +23,10 @@ export const filterOptions = {
 const Projects = ({ projects }: { projects: Works[] }) => {
   const filters = Object.entries(filterOptions);
   const [activeFilter, setActiveFilter] = useState<string>("All");
+  const [search, setSearch] = useState<string>("");
   const [showProjectModal, setShowProjectModal] = useState<boolean>(false);
   const [filteredProjects, setFilteredProjects] = useState<Works[]>(projects);
+
   const [modalProject, setModalProject] = useState<ModalObject>({
     description: "",
     title: "",
@@ -40,6 +41,13 @@ const Projects = ({ projects }: { projects: Works[] }) => {
     );
     setFilteredProjects(filtered);
   }, [activeFilter]);
+
+  useEffect(() => {
+    const filtered = projects.filter((project) =>
+      project.title.toLowerCase().includes(search.toLowerCase())
+    );
+    setFilteredProjects(filtered);
+  }, [search]);
 
   const handleShowModal = (projectId: string) => {
     const currentProject = projects.find(
@@ -56,6 +64,8 @@ const Projects = ({ projects }: { projects: Works[] }) => {
       {showProjectModal && (
         <Modal {...modalProject} setShowModal={setShowProjectModal} />
       )}
+      <SearchBar setSearch={setSearch} />
+      <h4 style={{ marginTop: "20px" }}>Select filter option:</h4>
       <Filter
         filters={filters}
         setFilter={setActiveFilter}
