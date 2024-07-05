@@ -16,7 +16,7 @@
   .app__project_item {
     width: 290px;
     min-width: 290px;
-    max-height: 370px;
+    height: 390px;
     flex-direction: column;
 
     margin: 2rem;
@@ -119,8 +119,41 @@
     position: absolute;
     padding: 0.5rem 1rem;
     border-radius: 10px;
-    background-color: rgba(214, 214, 214, 0.816);
+    background-color: rgba(214, 214, 214, 0.9);
     top: -25px;
+  }
+}
+
+.app__search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__search_button {
+  border: none;
+  background-color: var(--red-color);
+  height: 38.5px;
+  width: 43px;
+  border-top-right-radius: 0.9rem;
+  border-bottom-right-radius: 0.9rem;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--dark-red-color);
+  }
+}
+
+.app__search_bar {
+  width: 16rem;
+  padding: 0.6rem;
+  margin: 1rem 0;
+  border-top-left-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  color: black;
+  &:focus {
+    outline: none;
   }
 }
 
