@@ -159,7 +159,7 @@ a {
 .app__modal-btn {
   height: 40px;
   padding: 0.6rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   border-radius: 5px;
   border: 2px solid var(--red-color);
   background-color: var(--red-color);
@@ -175,6 +175,9 @@ a {
 
 .app__modal {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   left: 0;
   top: 0;
@@ -195,11 +198,10 @@ a {
 
 .app__modal-content {
   background-color: var(--gray-color);
-  margin: 15% auto;
   padding: 20px;
   border: 3px solid var(--red-color);
   border-radius: 10px;
-  width: 50%;
+  width: 60%;
   color: black;
   padding: 30px;
   text-align: left;
