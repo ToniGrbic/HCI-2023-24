@@ -32,5 +32,19 @@ export default {
       codegen: { required: true },
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [
+        {
+          name: "tag",
+          title: "Tag",
+          type: "string",
+        },
+      ],
+      codegen: { required: true },
+      validation: (Rule) => Rule.required(),
+    },
   ],
 };
