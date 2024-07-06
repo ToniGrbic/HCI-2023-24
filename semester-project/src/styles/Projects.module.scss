@@ -166,13 +166,14 @@
   background-color: rgba(214, 214, 214, 0.316);
   color: white;
   font-weight: 600;
+  transition: background-color 0.2s ease;
   &:hover {
-    background-color: rgba(199, 199, 199, 0.816);
+    background-color: var(--red-color);
   }
 }
 
 .app__filter_btn_active {
-  background-color: rgba(199, 199, 199, 0.816);
+  background-color: var(--red-color);
 }
 
 .app__filter_parent {
