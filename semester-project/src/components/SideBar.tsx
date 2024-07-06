@@ -4,6 +4,8 @@ import { HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
 import useClickOutside from "@/hooks/custom/useClickOutside";
 import styles from "@/styles/Navbar.module.scss";
+import Image from "next/image";
+import icon from "@/assets/favicon-2.png";
 
 type SidebarProps = {
   links: [string, string][];
@@ -30,25 +32,36 @@ const SideBar = ({ links, currentLink, setCurrentLink }: SidebarProps) => {
     <>
       <HiMenu onClick={() => setToggle(true)} />
       {toggle && (
-        <div>
-          <div ref={wrapperRef}>
+        <div className={styles.app__menu_wrapper}>
+          <div className={styles.app__menu_container} ref={wrapperRef}>
             <HiX onClick={() => setToggle(false)} />
-            <ul>
+            <div
+              className={`${styles.app__icon_div} ${styles.app__center_container}`}
+            >
+              <Image src={icon} alt="icon" width={32} height={32} priority />
               <h3>portfolio</h3>
+            </div>
+
+            <ul className={styles.app__navbar_links}>
               {links.map(([name, path]) => {
                 return (
-                  <li key={name}>
+                  <li key={`link-${name}`}>
                     <Link
                       href={path}
-                      key={`link-${name}`}
                       onClick={() => handleMenuClick(path)}
-                      className={
-                        currentLink === path
-                          ? styles.app__navbar_menulink_color
-                          : ""
-                      }
+                      className={`${styles.app__navbar_link}
+                    ${
+                      currentLink === path ? styles.app__navbar_link_color : ""
+                    }`}
                     >
                       {name}
+                      <div
+                        className={
+                          currentLink === path
+                            ? `${styles.app__navbar_link_underline}`
+                            : ""
+                        }
+                      />
                     </Link>
                   </li>
                 );

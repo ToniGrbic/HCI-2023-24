@@ -33,7 +33,7 @@ body {
   --gray-color: rgb(194, 194, 194);
   --blue-color: #2a323b;
   --red-color: #db444e;
-  --dark-red-color: #d72834;
+  --dark-red-color: #e01d2a;
   --purple-color: rgb(138, 48, 135);
   --dark-purple-color: rgb(97, 32, 95);
   --gray-navbar-color-menu: rgba(83, 83, 83, 0.9);
@@ -121,14 +121,18 @@ a {
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: var(--red-color);
   font-size: 1rem;
   transition: 300ms;
   color: white;
   &:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--dark-red-color);
   }
+}
+
+button {
+  border: none;
 }
 
 .app__flex {

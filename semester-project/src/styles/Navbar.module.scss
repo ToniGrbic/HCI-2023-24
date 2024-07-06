@@ -24,6 +24,14 @@
     margin-left: 10px;
   }
 }
+
+.app__center_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .app__navbar_links {
   @media screen and (max-width: 900px) {
     display: none;
@@ -97,13 +105,13 @@
     }
   }
 
-  div {
+  div.app__menu_wrapper {
     z-index: 2;
     @include fixed_element;
     width: 100%;
 
     background-color: rgba(0, 0, 0, 0.85);
-    div {
+    div.app__menu_container {
       @include fixed_element;
       z-index: 5;
       padding: 2rem 1rem 0rem 0rem;
@@ -126,7 +134,7 @@
 
       ul {
         list-style: none;
-        margin: 0;
+        margin-top: 2rem;
         padding: 0;
         height: 100%;
         width: 100%;
@@ -140,10 +148,8 @@
           margin: 1rem;
 
           a {
-            color: white;
             text-decoration: none;
-            font-size: 1rem;
-            text-transform: uppercase;
+            font-size: 1.1rem;
             font-weight: 500;
             transition: all 0.3s ease-in-out;
 
