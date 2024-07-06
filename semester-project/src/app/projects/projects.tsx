@@ -36,18 +36,16 @@ const Projects = ({ projects }: { projects: Works[] }) => {
   });
 
   useEffect(() => {
-    const filtered = projects.filter(
-      (project) => project.tags.includes(activeFilter) || activeFilter === "All"
-    );
-    setFilteredProjects(filtered);
-  }, [activeFilter]);
-
-  useEffect(() => {
-    const filtered = projects.filter((project) =>
-      project.title.toLowerCase().includes(search.toLowerCase())
-    );
-    setFilteredProjects(filtered);
-  }, [search]);
+    const filteredProjects = projects
+      .filter(
+        (project) =>
+          project.tags.includes(activeFilter) || activeFilter === "All"
+      )
+      .filter((project) =>
+        project.title.toLowerCase().includes(search.toLowerCase())
+      );
+    setFilteredProjects(filteredProjects);
+  }, [activeFilter, search]);
 
   const handleShowModal = (projectId: string) => {
     const currentProject = projects.find(
