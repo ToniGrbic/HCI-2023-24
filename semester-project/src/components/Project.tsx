@@ -6,6 +6,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import { NextSanityImage } from "@/types/return-types";
 import { Works } from "@/types/schema-types";
 import { client } from "@/lib/client";
+import { DetailsBtn } from "@/components";
 
 type ProjectProps = {
   project: Works;
@@ -40,12 +41,7 @@ const Project = ({ project, handleShowModal }: ProjectProps) => {
         <p className="app__p-text" style={{ marginTop: 10 }}>
           {project.description.slice(0, 85).concat("...")}
         </p>
-        <button
-          className="app__modal-btn"
-          onClick={() => handleShowModal(project._id)}
-        >
-          Details
-        </button>
+        <DetailsBtn handleShowModal={handleShowModal} id={project._id} />
         <div className={`${styles.app__project_tag} app__flex`}>
           <p className="app__p-text">{project.tags[0]}</p>
         </div>

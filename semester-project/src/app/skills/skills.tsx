@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import styles from "@/styles/Skills.module.scss";
 import { client } from "@/lib/client";
-import { Modal } from "@/components";
-import { useNextSanityImage } from "next-sanity-image";
+import { Modal, DetailsBtn } from "@/components";
+
 import type { Skills } from "@/types/schema-types";
 import type { NextSanityImage } from "@/types/return-types";
 
@@ -52,6 +53,10 @@ const SkillSection = ({ skills }: { skills: Skills[] }) => {
                     priority
                   />
                   <p>{skill.name}</p>
+                  <DetailsBtn
+                    handleShowModal={handleShowSkillModal}
+                    id={skill._id}
+                  />
                 </div>
               </div>
             );
