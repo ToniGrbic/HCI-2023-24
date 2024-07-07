@@ -36,9 +36,13 @@ body {
   --dark-red-color: #e01d2a;
   --purple-color: rgb(138, 48, 135);
   --dark-purple-color: rgb(97, 32, 95);
-  --gray-navbar-color-menu: rgba(83, 83, 83, 0.9);
+  --gray-navbar-color-menu: rgba(83, 83, 83, 0.95);
   --gray-navbar-color-transparent: rgba(83, 83, 83, 0.8);
   --dark-color: rgb(53, 53, 53);
+}
+
+button.btn-active-dark-red {
+  background-color: var(--dark-red-color);
 }
 
 * {

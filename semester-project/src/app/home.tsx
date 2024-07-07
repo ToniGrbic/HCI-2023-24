@@ -44,7 +44,7 @@ function Home({ about }: { about: About }) {
       </div>
       <button
         onClick={() => setShowAbout((prev) => !prev)}
-        className="about-btn"
+        className={`about-btn ${showAbout ? "btn-active-dark-red" : ""}`}
       >
         Learn more
       </button>
