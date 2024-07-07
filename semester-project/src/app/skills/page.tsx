@@ -13,9 +13,7 @@ export default async function Page() {
   return (
     <>
       <h1 className="hand-script-headline">My Skills</h1>
-      <h4 style={{ marginTop: "20px" }}>
-        click on each skill to view description
-      </h4>
+      <h4 style={{ marginTop: "20px" }}>Select filter option:</h4>
       <SkillSection skills={skills} />
     </>
   );

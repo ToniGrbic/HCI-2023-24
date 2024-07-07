@@ -1,19 +1,24 @@
 "use client";
-import React, { useState } from "react";
-import { useNextSanityImage } from "next-sanity-image";
-import Image from "next/image";
+import React, { useState, useEffect } from "react";
 import styles from "@/styles/Skills.module.scss";
-import { client } from "@/lib/client";
-import { Modal, DetailsBtn } from "@/components";
+import { Modal, Filter, Skill } from "@/components";
 
 import type { Skills } from "@/types/schema-types";
-import type { NextSanityImage } from "@/types/return-types";
+
+const filterOptions = {
+  All: "All",
+  Frontend: "Frontend",
+  Backend: "Backend",
+  Database: "Database",
+  Language: "Language",
+};
 
 const SkillSection = ({ skills }: { skills: Skills[] }) => {
   const [showSkillModal, setShowSkillModal] = useState<boolean>(false);
   const [modalDesc, setModalDesc] = useState<string>("");
   const [modalTitle, setModalTitle] = useState<string>("");
-  const nextSanityImage = useNextSanityImage;
+  const [activeFilter, setFilter] = useState<string>("All");
+  const [filteredSkills, setFilteredSkills] = useState<Skills[]>(skills);
 
   const handleShowSkillModal = (skill_id: string) => {
     const currentSkill = skills.find((skill) => skill._id === skill_id)!;
@@ -21,6 +26,15 @@ const SkillSection = ({ skills }: { skills: Skills[] }) => {
     setModalTitle(currentSkill.name);
     setShowSkillModal(true);
   };
+
+  useEffect(() => {
+    const filteredProjects = skills.filter(
+      (skill) => skill.tags.includes(activeFilter) || activeFilter === "All"
+    );
+    setFilteredSkills(filteredProjects);
+  }, [activeFilter]);
+
+  const filters = Object.entries(filterOptions);
 
   return (
     <>
@@ -31,34 +45,20 @@ const SkillSection = ({ skills }: { skills: Skills[] }) => {
           setShowModal={setShowSkillModal}
         />
       )}
+      <Filter
+        filters={filters}
+        activeFilter={activeFilter}
+        setFilter={setFilter}
+      />
       <div className={styles.app__skills_container}>
         <div className={styles.app__skills_list}>
-          {skills?.map((skill) => {
-            const imageProps: NextSanityImage = nextSanityImage(
-              client,
-              skill.icon
-            );
+          {filteredSkills?.map((skill) => {
             return (
-              <div
-                className={`${styles.app__skills_item} app__flex`}
+              <Skill
                 key={skill._id}
-                onClick={() => handleShowSkillModal(skill._id)}
-              >
-                <div className="app__flex">
-                  <Image
-                    {...imageProps!}
-                    width={50}
-                    height={50}
-                    alt={skill.name}
-                    priority
-                  />
-                  <p>{skill.name}</p>
-                  <DetailsBtn
-                    handleShowModal={handleShowSkillModal}
-                    id={skill._id}
-                  />
-                </div>
-              </div>
+                handleShowSkillModal={handleShowSkillModal}
+                skill={skill}
+              />
             );
           })}
         </div>
