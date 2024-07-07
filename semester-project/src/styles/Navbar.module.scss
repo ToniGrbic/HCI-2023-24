@@ -17,6 +17,10 @@
   position: fixed;
   top: 0px;
   z-index: 2;
+
+  @media screen and (max-width: 520px) {
+    justify-content: space-between;
+  }
 }
 .app__icon_div {
   display: flex;
@@ -189,7 +193,7 @@
     }
   }
   @media screen and (max-width: 520px) {
-    width: 140px;
+    display: none;
   }
 }
 
