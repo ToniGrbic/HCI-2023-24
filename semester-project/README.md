@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 ## Deployed project url: https://tgrbic-semester-project.vercel.app/
+
+## Notion documentation: https://www.notion.so/HCI-personal-portfolio-06a136fe173c4501a15e1974f8b5f60d#7f2685ed0aa14a65b0fd6ccdbdf57a7b
 
 ## Getting Started
 
