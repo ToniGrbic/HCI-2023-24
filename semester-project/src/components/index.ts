@@ -8,3 +8,4 @@ export { default as Project } from "./Project";
 export { default as SearchBar } from "./SearchBar";
 export { default as Filter } from "./Filter";
 export { default as DetailsBtn } from "./DetailsBtn";
+export { default as Skill } from "./Skill";
