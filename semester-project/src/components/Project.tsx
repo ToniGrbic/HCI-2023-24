@@ -22,7 +22,7 @@ const Project = ({ project, handleShowModal }: ProjectProps) => {
   return (
     <div className={styles.app__project_item}>
       <div className={`${styles.app__project_img} app__flex`} key={project._id}>
-        <Image {...imageProps!} alt={project.title} priority />
+        <Image {...imageProps!} alt={project.title} loading="lazy" />
         <div className={`${styles.app__project_hover} app__flex`}>
           <a href={project.projectLink} target="_blank" rel="noreferrer">
             <div className="app__flex">
