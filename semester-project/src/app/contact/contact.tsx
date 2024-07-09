@@ -15,7 +15,6 @@ const Contact = () => {
         return;
       }
     }
-    const data = Object.fromEntries(formData.entries());
 
     e.currentTarget.reset();
     toast.success("Message sent successfully");

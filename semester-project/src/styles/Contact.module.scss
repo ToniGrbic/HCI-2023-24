@@ -2,11 +2,14 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  row-gap: 1rem;
   width: 700px;
   margin-top: 2rem;
   @media (max-width: 768px) {
     width: 100%;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -16,7 +19,7 @@
   font-size: 1rem;
   border-radius: 0.5rem;
   width: 100%;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .contact__textarea_input {
@@ -26,6 +29,7 @@
   resize: none;
   height: 10rem;
   font-family: sans-serif;
+  margin-bottom: 1rem;
 }
 
 .contact__form_container {
