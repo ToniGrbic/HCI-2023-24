@@ -24,16 +24,20 @@ const Project = ({ project, handleShowModal }: ProjectProps) => {
       <div className={`${styles.app__project_img} app__flex`} key={project._id}>
         <Image {...imageProps!} alt={project.title} loading="lazy" />
         <div className={`${styles.app__project_hover} app__flex`}>
-          <a href={project.projectLink} target="_blank" rel="noreferrer">
-            <div className="app__flex">
-              <AiFillEye />
-            </div>
-          </a>
-          <a href={project.codeLink} target="_blank" rel="noreferrer">
-            <div className="app__flex">
-              <AiFillGithub />
-            </div>
-          </a>
+          {project.projectLink && (
+            <a href={project.projectLink} target="_blank" rel="noreferrer">
+              <div className="app__flex">
+                <AiFillEye />
+              </div>
+            </a>
+          )}
+          {project.codeLink && (
+            <a href={project.codeLink} target="_blank" rel="noreferrer">
+              <div className="app__flex">
+                <AiFillGithub />
+              </div>
+            </a>
+          )}
         </div>
       </div>
       <div
