@@ -37,7 +37,7 @@ body {
   --purple-color: rgb(138, 48, 135);
   --dark-purple-color: rgb(97, 32, 95);
   --gray-navbar-color-menu: rgba(83, 83, 83, 0.95);
-  --gray-navbar-color-transparent: rgba(83, 83, 83, 0.8);
+  --gray-navbar-color-transparent: rgba(83, 83, 83, 0.9);
   --dark-color: rgb(53, 53, 53);
 }
 
@@ -136,7 +136,7 @@ a {
   opacity: 0;
 }
 .about-btn {
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding: 1rem;
   border-radius: 8px;
   background-color: var(--red-color);
