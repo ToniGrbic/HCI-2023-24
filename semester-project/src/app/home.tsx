@@ -33,14 +33,14 @@ function Home({ about }: { about: About }) {
   if (isLoading) return <Loading />;
 
   return (
-    <>
+    <div className="home-content-container">
       <div className="description-div">
         <h1>
           Hello my name is
           <span className="hand-script-headline">{about.name}</span>
         </h1>
         <h2>{about.description}</h2>
-        <h2>{age.toFixed(8)} years old</h2>
+        <h2 className="age-text">{age.toFixed(8)} years old</h2>
       </div>
       <button
         onClick={() => setShowAbout((prev) => !prev)}
@@ -51,7 +51,7 @@ function Home({ about }: { about: About }) {
       <div className={`about ${!showAbout ? "fade" : ""}`}>
         <p>{about.paragraph}</p>
       </div>
-    </>
+    </div>
   );
 }
 export default Home;
