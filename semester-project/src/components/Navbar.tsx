@@ -12,6 +12,7 @@ const links = {
   Projects: "/projects",
   Skills: "/skills",
   Experiences: "/experiences",
+  Contact: "/contact",
 };
 
 const Navbar = () => {
