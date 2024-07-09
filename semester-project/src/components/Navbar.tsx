@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, Dispatch, SetStateAction } from "react";
 import styles from "@/styles/Navbar.module.scss";
 import icon from "@/assets/favicon-2.png";
 import { usePathname } from "next/navigation";
@@ -7,7 +7,7 @@ import { SocialLinks, SideBar } from ".";
 import Link from "next/link";
 import Image from "next/image";
 
-const links = {
+export const links = {
   Home: "/",
   Projects: "/projects",
   Skills: "/skills",
@@ -15,9 +15,13 @@ const links = {
   Contact: "/contact",
 };
 
-const Navbar = () => {
+type NavbarProps = {
+  setCurrentLink: Dispatch<SetStateAction<string>>;
+  currentLink: string;
+};
+
+const Navbar = ({ setCurrentLink, currentLink }: NavbarProps) => {
   const linksArr: [string, string][] = Object.entries(links);
-  const [currentLink, setCurrentLink] = useState<string>("");
   const pathname: string = usePathname();
 
   useEffect(() => {

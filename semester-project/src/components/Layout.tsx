@@ -1,17 +1,20 @@
-import React, { ReactNode } from "react";
+"use client";
+import React, { ReactNode, useState } from "react";
 import { Navbar, Footer } from ".";
 
 const Layout = ({ children }: { children: ReactNode }) => {
+  const [currentLink, setCurrentLink] = useState<string>("");
+
   return (
     <div className="wrapper">
       <div>
         <header>
-          <Navbar />
+          <Navbar currentLink={currentLink} setCurrentLink={setCurrentLink} />
         </header>
         <main className="container">{children}</main>
       </div>
       <footer>
-        <Footer />
+        <Footer setCurrentLink={setCurrentLink} />
       </footer>
     </div>
   );

@@ -4,9 +4,8 @@
   width: 100%;
   margin-top: 50px;
 
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 17rem;
   background-color: var(--dark-color);
   padding: 1rem;
 }
@@ -31,8 +30,8 @@
 
 @media screen and (max-width: 567px) {
   .app__footer {
-    gap: 3rem;
-    align-items: space-between;
     font-size: 0.8rem;
+    gap: 1.25rem;
+    align-items: flex-start;
   }
 }
