@@ -1,8 +1,12 @@
 ﻿# Semester Project <!-- omit in toc -->
 
-## Deployed project link: https://tgrbic-portfolio.vercel.app/
+## Deployed project link:
 
-## Notion document link: https://www.notion.so/HCI-personal-portfolio-06a136fe173c4501a15e1974f8b5f60d#7f2685ed0aa14a65b0fd6ccdbdf57a7b
+https://tgrbic-portfolio.vercel.app/
+
+## Notion document link:
+
+https://www.notion.so/HCI-personal-portfolio-06a136fe173c4501a15e1974f8b5f60d#7f2685ed0aa14a65b0fd6ccdbdf57a7b
 
 - [Project Structure](#project-structure)
 
