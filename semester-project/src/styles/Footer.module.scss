@@ -28,6 +28,12 @@
   gap: 1rem;
 }
 
+.app__footer_sitemap {
+  a:hover {
+    color: var(--dark-red-color);
+  }
+}
+
 @media screen and (max-width: 567px) {
   .app__footer {
     font-size: 0.8rem;

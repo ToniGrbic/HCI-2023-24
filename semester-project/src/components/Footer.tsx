@@ -24,7 +24,7 @@ const Footer = ({
         <p>Gmail: tonigrbic.5@gmail.com</p>
         <p>{year} Created by Toni Grbić</p>
       </div>
-      <div>
+      <div className={styles.app__footer_sitemap}>
         Sitemap:{" "}
         {linksArr.map(([name, path]) => {
           return (
