@@ -8,8 +8,6 @@ https://tgrbic-portfolio.vercel.app/
 
 https://www.notion.so/HCI-personal-portfolio-06a136fe173c4501a15e1974f8b5f60d#7f2685ed0aa14a65b0fd6ccdbdf57a7b
 
-- [Project Structure](#project-structure)
-
 # Weekly progress
 
 ### Week 1
