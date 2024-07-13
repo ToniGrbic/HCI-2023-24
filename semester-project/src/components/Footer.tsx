@@ -1,9 +1,9 @@
 "use client";
 import React, { Dispatch, SetStateAction } from "react";
-import styles from "@/styles/Footer.module.scss";
-import { SocialLinks } from ".";
 import Link from "next/link";
+import styles from "@/styles/Footer.module.scss";
 import { links } from "@/components/Navbar";
+import { SocialLinks } from ".";
 
 const Footer = ({
   setCurrentLink,
@@ -25,7 +25,7 @@ const Footer = ({
         <p>{year} Created by Toni Grbić</p>
       </div>
       <div className={styles.app__footer_sitemap}>
-        Sitemap:{" "}
+        <p style={{ paddingBottom: "0.5rem" }}>Sitemap: </p>
         {linksArr.map(([name, path]) => {
           return (
             <p>

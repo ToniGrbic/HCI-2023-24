@@ -109,13 +109,17 @@ a {
 .social-link-container {
   display: flex;
   align-items: center;
+  &:hover .social-link-text {
+    color: var(--red-color);
+  }
+
+  &:hover svg {
+    color: var(--red-color);
+  }
 }
 
 .social-link-text {
   margin-left: 6px;
-  &:hover {
-    color: var(--red-color);
-  }
 }
 
 .about {
