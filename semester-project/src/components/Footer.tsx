@@ -28,7 +28,7 @@ const Footer = ({
         <p style={{ paddingBottom: "0.5rem" }}>Sitemap: </p>
         {linksArr.map(([name, path]) => {
           return (
-            <p>
+            <p key={name}>
               <Link href={path} onClick={() => setCurrentLink(path)}>
                 {name}
               </Link>
