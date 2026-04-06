@@ -1,5 +1,5 @@
-import styles from "@/styles/Experiences.module.scss";
 import { client } from "@/lib/client";
+import styles from "@/styles/Experiences.module.scss";
 import { Experiences } from "@/types/schema-types";
 
 async function getExperiences(): Promise<Experiences[]> {
