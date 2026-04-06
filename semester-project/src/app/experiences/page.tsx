@@ -18,6 +18,7 @@ const Page = async () => {
         {experiences.map((experience, index) => {
           return (
             <div
+              key={experience._id}
               className={`${index % 2 == 0 ? styles.left : styles.right}
                ${styles.container} `}
             >
