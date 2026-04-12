@@ -36,7 +36,7 @@ export default {
       title: "ImageUrl",
       type: "image",
       codegen: { required: true },
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) => Rule.optional(),
       options: {
         hotspot: true,
       },
