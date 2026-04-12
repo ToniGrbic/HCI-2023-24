@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, Dispatch, SetStateAction } from "react";
-import styles from "@/styles/Navbar.module.scss";
 import icon from "@/assets/favicon-2.png";
-import { usePathname } from "next/navigation";
-import { SocialLinks, SideBar } from ".";
-import Link from "next/link";
+import styles from "@/styles/Navbar.module.scss";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Dispatch, SetStateAction, useEffect } from "react";
+import { SideBar, SocialLinks } from ".";
 
 export const links = {
   Home: "/",
@@ -26,7 +26,7 @@ const Navbar = ({ setCurrentLink, currentLink }: NavbarProps) => {
 
   useEffect(() => {
     setCurrentLink(pathname);
-  }, []);
+  }, [pathname]);
 
   return (
     <nav className={styles.app__navbar}>
