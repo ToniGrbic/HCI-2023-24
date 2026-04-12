@@ -12,13 +12,13 @@ const transporter = nodemailer.createTransport({
   port: 587,
   auth: {
     user: "tonigrbic.5@gmail.com",
-    pass: "kdez cdki opae mmhr",
+    pass: process.env.NEXT_APP_SMTP_PASSWORD
   },
 });
 
 export async function submitFormAction(
   prevState: FormState,
-  formData: FormData
+  formData: FormData,
 ) {
   const name = formData.get("name") as string;
   const email = formData.get("email") as string;
